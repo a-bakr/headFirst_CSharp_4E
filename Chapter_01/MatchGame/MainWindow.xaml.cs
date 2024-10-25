@@ -8,15 +8,19 @@ namespace MatchGame
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
+
 	public partial class MainWindow : Window
 	{
 		private readonly DispatcherTimer _timer = new DispatcherTimer();
+		private readonly int _startingTime = 20;
 		private int _tenthsOfSecondsElapsed;
 		private int _matchesFound;
+		private double _bestScore;
+
 		public MainWindow()
 		{
-
 			InitializeComponent();
+
 			_timer.Interval = TimeSpan.FromSeconds(0.1);
 			_timer.Tick += TimerOnTick;
 
@@ -25,12 +29,20 @@ namespace MatchGame
 
 		void TimerOnTick(object? sender, EventArgs e)
 		{
-			_tenthsOfSecondsElapsed++;
+			_tenthsOfSecondsElapsed--;
 			TimeTextBlock.Text = (_tenthsOfSecondsElapsed / 10f).ToString("0.0s");
-			if (_matchesFound == 8)
+
+			if (GameFinished())
 			{
 				_timer.Stop();
-				TimeTextBlock.Text += " - play again";
+				double time = (_startingTime - (_tenthsOfSecondsElapsed / 10f));
+				TimeTextBlock.Text = $"{time:0.0s} - play again";
+
+				if (time < _bestScore || _bestScore == 0)
+				{
+					_bestScore = time;
+					BestScore.Text = $"Best Score: {_bestScore:0.0s}";
+				}
 			}
 		}
 
@@ -51,18 +63,15 @@ namespace MatchGame
 			var random = new Random();
 			foreach (var textBlock in MainGrid.Children.OfType<TextBlock>())
 			{
-				if (textBlock.Name != TimeTextBlock.Name)
-				{
-					textBlock.Visibility = Visibility.Visible;
-					var index = random.Next(animalEmoji.Count);
-					var nextEmoji = animalEmoji[index];
-					textBlock.Text = nextEmoji;
-					animalEmoji.RemoveAt(index);
-				}
+				textBlock.Visibility = Visibility.Visible;
+				var index = random.Next(animalEmoji.Count);
+				var nextEmoji = animalEmoji[index];
+				textBlock.Text = nextEmoji;
+				animalEmoji.RemoveAt(index);
 			}
 
 			_timer.Start();
-			_tenthsOfSecondsElapsed = 0;
+			_tenthsOfSecondsElapsed = _startingTime * 10;
 			_matchesFound = 0;
 		}
 
@@ -94,10 +103,15 @@ namespace MatchGame
 
 		private void TimeTextBlock_OnMouseDown(object sender, MouseButtonEventArgs e)
 		{
-			if (_matchesFound == 8)
+			if (GameFinished())
 			{
 				SetUpGame();
 			}
+		}
+
+		private bool GameFinished()
+		{
+			return _matchesFound == 8 || _tenthsOfSecondsElapsed == 0;
 		}
 	}
 }
