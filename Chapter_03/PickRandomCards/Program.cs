@@ -1,13 +1,22 @@
 ﻿using PickRandomCards;
 
-Console.Write("Enter the number of cards to pick: ");
-var input = Console.ReadLine()?.TrimStart().TrimEnd();
-
-if (int.TryParse(input, out int numberOfCard))
+while (true)
 {
-	var pickedCards = CardPicker.PickSomeCard(numberOfCard);
-	foreach (var pickedCard in pickedCards)
+	Console.Write("Enter the number of cards to pick: ");
+	var input = Console.ReadLine()?.TrimStart().TrimEnd();
+
+	if (int.TryParse(input, out int numberOfCard))
 	{
-		Console.WriteLine(pickedCard);
+		var pickedCards = CardPicker.PickSomeCard(numberOfCard);
+		foreach (var pickedCard in pickedCards)
+		{
+			Console.WriteLine(pickedCard);
+		}
+
+		break;
+	}
+	else
+	{
+		Console.WriteLine("Please try again!");
 	}
 }
