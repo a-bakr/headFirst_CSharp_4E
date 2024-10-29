@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatchGame", "Chapter_01\Mat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExperimentWithControls", "Chapter_02\ExperimentWithControls\ExperimentWithControls.csproj", "{101ED1AF-EE68-4CDD-9C05-7ED51F472E76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickRandomCards", "Chapter_03\PickRandomCards\PickRandomCards.csproj", "{7C7DB9AB-0673-4187-B2E5-53FCFEB4B799}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PickRandomCards", "Chapter_03\PickRandomCards\PickRandomCards.csproj", "{7C7DB9AB-0673-4187-B2E5-53FCFEB4B799}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickACardUI", "Chapter_03\PickACardUI\PickACardUI.csproj", "{9DBA6B8F-9AF4-4890-BB2F-9758110175DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PickACardUI", "Chapter_03\PickACardUI\PickACardUI.csproj", "{9DBA6B8F-9AF4-4890-BB2F-9758110175DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Casino", "Chapter_03\Casino\Casino.csproj", "{E210ADCF-C6F6-46F0-8677-BD2A64DFBDFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casino", "Chapter_03\Casino\Casino.csproj", "{E210ADCF-C6F6-46F0-8677-BD2A64DFBDFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{C50E93EC-781A-486A-970C-A25DE22959E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{C50E93EC-781A-486A-970C-A25DE22959E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbilityScoreTester", "Chapter_04\AbilityScoreTester\AbilityScoreTester.csproj", "{F13DF450-67A2-468E-A687-7A8B2933807E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C50E93EC-781A-486A-970C-A25DE22959E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C50E93EC-781A-486A-970C-A25DE22959E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C50E93EC-781A-486A-970C-A25DE22959E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13DF450-67A2-468E-A687-7A8B2933807E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13DF450-67A2-468E-A687-7A8B2933807E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13DF450-67A2-468E-A687-7A8B2933807E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13DF450-67A2-468E-A687-7A8B2933807E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
