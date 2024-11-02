@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casino", "Chapter_03\Casino
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{C50E93EC-781A-486A-970C-A25DE22959E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbilityScoreTester", "Chapter_04\AbilityScoreTester\AbilityScoreTester.csproj", "{F13DF450-67A2-468E-A687-7A8B2933807E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbilityScoreTester", "Chapter_04\AbilityScoreTester\AbilityScoreTester.csproj", "{F13DF450-67A2-468E-A687-7A8B2933807E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElephantApp", "Chapter_04\Elephant\ElephantApp.csproj", "{5DC08BDF-313F-4127-8175-F3319319821F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{F13DF450-67A2-468E-A687-7A8B2933807E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F13DF450-67A2-468E-A687-7A8B2933807E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F13DF450-67A2-468E-A687-7A8B2933807E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC08BDF-313F-4127-8175-F3319319821F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC08BDF-313F-4127-8175-F3319319821F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC08BDF-313F-4127-8175-F3319319821F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC08BDF-313F-4127-8175-F3319319821F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
